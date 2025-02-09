@@ -88,7 +88,9 @@ How can I test #file:webscraper.py?
    
 ![testing suggestions for file](./images/new-how-to-test-webscraper.png?raw=true "testing suggestions for file")
 
-4. Let's take the generated code and put it into a new file. Click on the checkmark in the top right corner of the code block (next to the trash can).
+4. Let's take the generated code and put it into a new file. Click on the *Apply Edits* icon or the checkmark in the top right corner of the code block (next to the trash can).
+
+![apply edits](./images/copilot-testing-apply-edit.jpg?raw=true "apply edits")
    
 ![apply edits](./images/new-click-to-apply-edits.png?raw=true "apply edits")
 
@@ -98,7 +100,7 @@ How can I test #file:webscraper.py?
 
 ![save new file](./images/new-save-test_webscraper.png?raw=true "save new file")
 
-6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. Also, *if present* remove the default context in the chat. Click on the icon next to the test_webscraper.py file to delete it. (If not showing up to remove, you can click in the file and then it should show up.)
+6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. You do that by clicking on the "+" button in the upper right of the separate chat dialog. Also, *if present* remove the default context in the chat. Click on the icon next to the test_webscraper.py file to delete it as the context. (If not showing up to remove, you can click in the file and then it should show up.)
 
 ![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
 ![delete default context](./images/new-delete-default-context.png?raw=true "delete default context")
@@ -109,7 +111,7 @@ How can I test #file:webscraper.py?
 ![add context](./images/new-choose-webscraper.png?raw=true "add context") 
 ![updated context](./images/new-updated-context.png?raw=true "updated context") 
 
-8. Now, let's ask Copilot how we can measure code coverage on the file?
+8. Now, let's ask Copilot how we can measure code coverage on the file? If Copilot creates a response that looks like another set of tests or testing code, then it probably ran with the */tests* shortcut. You can click on the *"rerun without"* link to get output similar to what's shown below.
 ```
 How can I measure code coverage on this file?
 ```
