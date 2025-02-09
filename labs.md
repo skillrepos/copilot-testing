@@ -159,7 +159,8 @@ import pytest
 ![new problems](./images/new-problems-in-test_prime.png?raw=true "new problems")
 
 3. We know what the fix is, but let's see if Copilot can help identify and correct the issue for us. Select/highlight all the code
-   
+and in the file and then right click and select *Copilot->Fix* from the menu.
+ 
 ![copilot fix](./images/new-copilot-fix.png?raw=true "Copilot fix")
 
 4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then *Accept* from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab.
@@ -185,7 +186,7 @@ code create-tables.sql
 
 ![testing suggestions for SQL](./images/new-generated-plan-to-test-sql.png?raw=true "testing suggestions for sql")   
 
-7. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Switch back to the *webscraper.py* file. Highlight all of the code in the file and then use the CMD/CTRL+I shortcut to bring up the chat dialog window and type in */explain*.
+7. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Switch back to the *webscraper.py* file. Highlight all of the code in the file and then use the CMD/CTRL+I shortcut to bring up the chat dialog window type in */explain*.
 
 ![explain webscraper.py](./images/ct51.png?raw=true "explain webscraper.py")   
 
@@ -211,7 +212,7 @@ code create-tables.sql
  
  ![full entry](./images/ct56.png?raw=true "full entry")  
 
-12. After executing this, you'll likely see lots of output, including example usage, code improvements, etc. But you can scan back up through the output to see the sections with explanations.
+12. After executing this, you'll likely see lots of output, including example usage, code improvements, etc. But you can scan back up through the output to see the sections with explanations. If you want to specifically see some suggested improvements, you can also try a prompt such as *How can I improve #file:test_webscraper.py?*
 
  ![explanation](./images/new-web-scraper-test-explanation.png?raw=true "explanation") 
 
