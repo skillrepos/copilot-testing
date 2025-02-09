@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.0 - 11/18/24
+## Revision 3.1 - 02/09/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -27,7 +27,7 @@ code prime.py
 
 ![using the shortcut command to gen tests](./images/new-slash-tests-command.png?raw=true "using the shortcut command to gen tests")
 
-5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). Reply yes to the dialog asking about saving AI-generated results.
+5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). (Make sure you are saving the testing file and not the prime.py file - it will probably have a temporary name of soemthing like "import_...".) Reply yes to the dialog asking about saving AI-generated results.
    
 ![proposed tests into new file](./images/new-slash-tests-output.png?raw=true "proposed tests into new file")
 ![saving file](./images/new-save-test_prime.png?raw=true "saving file")
@@ -98,7 +98,7 @@ How can I test #file:webscraper.py?
 
 ![save new file](./images/new-save-test_webscraper.png?raw=true "save new file")
 
-6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. Also, let's remove the default context in the chat. Click on the icon next to the test_webscraper.py file to delete it. 
+6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. Also, *if present* remove the default context in the chat. Click on the icon next to the test_webscraper.py file to delete it. (If not showing up to remove, you can click in the file and then it should show up.)
 
 ![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
 ![delete default context](./images/new-delete-default-context.png?raw=true "delete default context")
@@ -124,17 +124,17 @@ How can I measure code coverage on this file?
     
 ![insert command from chat to terminal](./images/new-command-from-chat-to-terminal.png?raw=true "insert command from chat to terminal")
 
-11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Switch back to the *test-prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
+11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Uncheck the "eye" icon. Switch back to the *test_prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?". (If the test_prime.py file shows up in the context window with a mark through it, you can unclick the *eye* icon to ensure it is used.)
 
 ```
 Are there any other edge cases that should be tested?
 ```
 
-![finding other test cases](./images/new-edge-cases-to-apply.png?raw=true "Finding other test cases")
+![finding other test cases](./images/new2-edge-cases-to-apply.png?raw=true "Finding other test cases")
 
 12. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code and then clicking on the *Accept changes* link above the code change.
 
-![adding test cases](./images/new-apply-edge-cases.png?raw=true "Adding test cases")
+![adding test cases](./images/new2-apply-edge-cases.png?raw=true "Adding test cases")
 
     
 <p align="center">
@@ -323,24 +323,24 @@ generate checks inline with the is_prime function to ensure that the inputs to t
 What other kinds of test cases should we check for?
 ```
 
-7. Notice that in my example, only lines 11-28 were used as a reference - which corresponds to what was visible in the editor (aka #editor). With only a subset of the test cases visible, it's possible/likely that Copilot would repeat some that were already in the parts of the file that weren't visible in the editor.  With this prompt, Copilot will likely add some additional test cases like these.
+8. Notice that in my example, only lines 11-28 were used as a reference - which corresponds to what was visible in the editor (aka #editor). With only a subset of the test cases visible, it's possible/likely that Copilot would repeat some that were already in the parts of the file that weren't visible in the editor.  With this prompt, Copilot will likely add some additional test cases like these.
 
 ![only visible context](./images/new-only-editor-visible-context.png?raw=true "only visible context") 
    
-8. To make sure we get the entire file as context, we could use the *#file* selector. But we can also do it a different way. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
+9. To make sure we get the entire file as context, we can follow the same process as in the previous lab. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
    
 ![disable current file context](./images/new-disable-current-file-context.png?raw=true "disable current file context") 
 
 ![disabled current file context](./images/new-disabled-current-file-context.png?raw=true "disabled current file context") 
 
-9. Click on the *paper clip* icon and select the *test-prime.py* file from the dialog that pops up to add the entire file as context. Afterwards, the chat window should look like the second screenshot below.
+10. Click on the *paper clip* icon and select the *test-prime.py* file from the dialog that pops up to add the entire file as context. Afterwards, the chat window should look like the second screenshot below.
 
 ![attach file context](./images/new-attach-context.png?raw=true "attach file context") 
 
 ![attached file context](./images/new-attached-file-for-context.png?raw=true "attached file context") 
 
 
-10. Now, we can input the same prompt again and we should see that the entire file was used instead of just the visible portion. Input the same prompt and notice the output. Since the entire file was used as context, the new test cases should not overlap the existing ones. Afterwards, you can add the changes into the *test-prime.py* file if you want.
+11. Now, we can input the same prompt again and we should see that the entire file was used instead of just the visible portion. Input the same prompt and notice the output. Since the entire file was used as context, the new test cases should not overlap the existing ones. Afterwards, you can add the changes into the *test-prime.py* file if you want.
 
 ```
 What other kinds of test cases should we check for?
@@ -348,13 +348,13 @@ What other kinds of test cases should we check for?
 
 ![distinct test case context](./images/new-distinct-test-case-context.png?raw=true "distinct test case context") 
 
-11. Finally, let's see if Copilot can help refactor our code to make it more testable. We'll use the *webscraper.py* file for this since it is more substantial.  Enter the query below in the Chat interface. 
+12. Finally, let's see if Copilot can help refactor our code to make it more testable. We'll use the *webscraper.py* file for this since it is more substantial.  Enter the query below in the Chat interface. 
 
 ```
 refactor the code in #file:webscraper.py to make it more easily testable
 ```
 
-12. You should see some suggestions for improving testability in the file in the chat output. These can be applied to the current code if you want.
+13. You should see some suggestions for improving testability in the file in the chat output. These can be applied to the current code if you want.
     
 ![Refactoring for testing](./images/new-refactor-for-testability.png?raw=true "refactoring for testing")  
 
@@ -370,7 +370,7 @@ refactor the code in #file:webscraper.py to make it more easily testable
 
 **Important Note: If any steps in this lab run with /tests by default, run them again using the "run without" option**
 
-1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito in our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, enter the following prompt:
+1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito in our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, start a new chat session, and enter the following prompt:
 
 ```
 add a pom.xml file with a mockito dependency version 3.3.3, and compiler source and target version 1.8
@@ -378,7 +378,7 @@ add a pom.xml file with a mockito dependency version 3.3.3, and compiler source 
 
 ![add pom with mockito dependency](./images/ct33.png?raw=true "add pom with mockito dependency")  
 
-2. Now, let's put the generated content into a new file in our project. Hover over the generated code, select the *... (More actions)* at the end and then click on *Insert into New File*. Then save the file as *pom.xml* via the *3 bar* menu in the upper left, then *File*, then *Save As..*. 
+2. Now, let's put the generated content into a new file in our project. Hover over the generated code, select the *... (More actions)* at the end and then click on *Insert into New File*. Then save the file as *pom.xml* via the *3 bar* menu in the upper left, then *File*, then *Save As..* (or use the keyboard shortcut).
 
 ![insert into new file](./images/ct34.png?raw=true "insert into new file")  
 
@@ -390,7 +390,7 @@ add a pom.xml file with a mockito dependency version 3.3.3, and compiler source 
 Referencing #file:pom.xml, create a StudentTest class for students enrolled at a university and add tests
 ```
 
-4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There may be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. If so, go ahead and add that part only into your *pom.xml* file. (You can just have the **corresponding section** of the pom.xml file contents highlighted and then *Apply* to replace it.) Save the changes to the *pom.xml* file afterwards.
+4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There may be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. (If you don't see it, click on the "Run without" to run the prompt without /tests.)  If you see it, go ahead and add that part only into your *pom.xml* file. (You can just have the **corresponding section** of the pom.xml file contents highlighted and then *Apply* to replace it.) Save the changes to the *pom.xml* file afterwards.
 
 ![add junit dependency](./images/new-update-pom-2.png?raw=true "add junit dependency")  
    
