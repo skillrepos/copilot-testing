@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.1 - 02/09/25
+## Revision 3.2 - 02/09/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -27,7 +27,7 @@ code prime.py
 
 ![using the shortcut command to gen tests](./images/new-slash-tests-command.png?raw=true "using the shortcut command to gen tests")
 
-5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). (Make sure you are saving the testing file and not the prime.py file - it will probably have a temporary name of soemthing like "import_...".) Reply yes to the dialog asking about saving AI-generated results.
+5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). (Make sure you are saving the testing file and not the prime.py file - it will probably have a temporary name of soemthing like "import_...".) If you get a dialog asking about saving AI-generated results, just reply yes.
    
 ![proposed tests into new file](./images/new-slash-tests-output.png?raw=true "proposed tests into new file")
 ![saving file](./images/new-save-test_prime.png?raw=true "saving file")
