@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.2 - 02/09/25
+## Revision 3.3 - 02/10/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -379,21 +379,19 @@ refactor the code in #file:webscraper.py to make it more easily testable
 add a pom.xml file with a mockito dependency version 3.3.3, and compiler source and target version 1.8
 ```
 
+2. You should see a button to create the file. Click on that and then accept the suggested default location to save it. After that, the file should be visible in an editor tab.
+   
+![add pom with mockito dependency](./images/copilot-testing-lab6-step1a.png?raw=true "add pom with mockito dependency") 
+   
 ![add pom with mockito dependency](./images/ct33.png?raw=true "add pom with mockito dependency")  
 
-2. Now, let's put the generated content into a new file in our project. Hover over the generated code, select the *... (More actions)* at the end and then click on *Insert into New File*. Then save the file as *pom.xml* via the *3 bar* menu in the upper left, then *File*, then *Save As..* (or use the keyboard shortcut).
-
-![insert into new file](./images/ct34.png?raw=true "insert into new file")  
-
-![save file](./images/ct29.png?raw=true "save file") 
-
-3. Now, let's create an appropriate test class and initial set of tests. Do this in the Copilot separate Chat interface, since we expect a significant amount of output and we may want to put it in a separate file. We'll use a prompt that tells Copilot to focus on the *pom.xml* file we just created.
+3. Now, let's create an appropriate test class and initial set of tests. Do this in the Copilot separate Chat interface, since we expect a significant amount of output and we may want to put it in a separate file. We'll use a prompt that tells Copilot to focus on the *pom.xml* file we just created. 
 
 ```
 Referencing #file:pom.xml, create a StudentTest class for students enrolled at a university and add tests
 ```
 
-4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There may be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. (If you don't see it, click on the "Run without" to run the prompt without /tests.)  If you see it, go ahead and add that part only into your *pom.xml* file. (You can just have the **corresponding section** of the pom.xml file contents highlighted and then *Apply* to replace it.) Save the changes to the *pom.xml* file afterwards.
+4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There may be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. (If you don't see it, click on the "Rerun without" to run the prompt without /tests.)  If you see it, go ahead and add that part only into your *pom.xml* file. (You can just hover over the chat ouput showing pom.xml updates and then click on the *Apply in Editor* icon to have the changes suggested in the actual pom.xml file. You can then click on *Accept changes* to make the changes permanent.) Save the changes to the *pom.xml* file afterwards.
 
 ![add junit dependency](./images/new-update-pom-2.png?raw=true "add junit dependency")  
    
@@ -404,12 +402,12 @@ Referencing #file:pom.xml, create only a StudentTest class for a student enrolle
 ```
 ![more specific query to create tests](./images/ct21.png?raw=true "more specific query to create tests")  
 
-6. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output for the *StudentTest* class, hover over the top right, and use the icon (or copy and paste) to put it in a different file. Save the file as **src/test/java/com/example/StudentTest.java**.
+6. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output for the *StudentTest* class, hover over the top right, and use the icon (or copy and paste) to put it in a new file. Save the file as **src/test/java/com/example/StudentTest.java**. Answer *yes* to any prompts about creating the folder.
 
 ![save new test](./images/new-save-into-file-studenttest.png?raw=true "save new test")
 ![save new test](./images/new-save-into-file-path.png?raw=true "save new test")
 
-7. Now, let's execute Maven to try the testing. (Note: We expect it to fail because we don't have the *Student* class implemented yet.)
+7. Now, let's execute Maven to try the testing. (Note: We expect it to fail because we don't have the *Student* class implemented yet.) Run the following command in the *TERMINAL*.
 
 ```
 mvn test
@@ -430,7 +428,7 @@ Referencing #editor, create a student class with verbose comments.
 
 ![saving student file](./images/new-save-into-file-student.png?raw=true "saving student file")
 
-10. Finally, let's run the test again and it should pass. 
+10. Finally, let's run the test again and it should pass. Execute the command below in the *TERMINAL*.
 
 ```
 mvn test
