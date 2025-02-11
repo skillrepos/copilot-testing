@@ -5,9 +5,13 @@ If you prefer and if you know one of the other IDEs supported by Copilot, you ca
 
 These steps **must** be completed prior to starting the actual labs.
 
-## Step 1. Ensure that you are signed up for Copilot access. 
+## Step 1. Copilot access. 
 
-If not, when signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
+GitHub has recently made a free version of Copilot available for limited use each month. You can use that version to do the labs in this course. If you prefer, you can signup for their paid individual planby following the details below, but this is optional for this training.
+
+**If you want to signup for a paid Copilot option...**
+
+When signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
 
 ![Signing up for Copilot](./images/ct01.png?raw=true "Signing up for Copilot")
 
