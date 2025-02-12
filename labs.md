@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.5 - 02/12/25
+## Revision 3.6 - 02/12/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -150,7 +150,7 @@ Are there any other edge cases that should be tested?
 
 **Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
 
-1. Let's see how the Copilot Fix functionality can help us out. Click on/open the *test_prime.py* file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
+1. Let's see how the Copilot Fix functionality can help us out. Click on/open the **test_prime.py** file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
 ```
 import pytest
 ```
@@ -164,7 +164,7 @@ and in the file and then right click and select *Copilot->Fix* from the menu.
  
 ![copilot fix](./images/new-copilot-fix.png?raw=true "Copilot fix")
 
-4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then *Accept* from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab.
+4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then **Accept** from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab.
 
 ![copilot fix](./images/new-copilot-fix-to-accept.png?raw=true "Copilot fix")
 
@@ -176,7 +176,7 @@ code create-tables.sql
 ```
 ![new file and chat](./images/new-open-create-tables-and-new-chat.png?raw=true "new file and chat")
 
-5. Since we already have our desired file selected, we can just run the */tests* command in the chat interface. 
+5. Since we already have our desired file selected, we can just run the */tests* command in the chat interface. (**Note:** There may be a long pause after it generates the first few suggested lines in the chat output. But after that pause, it should generate many more lines of suggested code.)
 
 ```
 /tests 
@@ -195,7 +195,7 @@ code create-tables.sql
 
 ![view in chat](./images/new-view-in-chat.png?raw=true "view in chat")   
 
-9. While we're at it, let's have Copilot explain how the testing file it created for us works. Start a *new* chat. In the chat interface - enter *@workspace /explain #* and pause. There should then be a popup, where you can use the arrow key to arrow down and select the *#file* entry and hit Enter. 
+9. While we're at it, let's have Copilot explain how the testing file it created for us works. Open the *test_webscraper.py* file. Then, in the chat panel, start a *new* chat (via the + sign). In the chat interface - enter *@workspace /explain #* **and pause**. There should then be a popup, where you can use the arrow key to arrow down and select the *#file* entry and hit Enter. 
 
 ```
 @workspace /explain #
