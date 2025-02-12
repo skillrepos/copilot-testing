@@ -380,11 +380,13 @@ refactor the code in #file:webscraper.py to make it more easily testable
 add a pom.xml file with a mockito dependency version 3.3.3, and compiler source and target version 1.8
 ```
 
-2. You should see a button to create the file. Click on that and then accept the suggested default location to save it. After that, the file should be visible in an editor tab.
+2. You may see a button to create the file. If so, click on that and then accept the suggested default location to save it. After that, the file should be visible in an editor tab.
+
+If you don't have a button in the chat to create the file, you can just hover over the code, click "...", then "Insert into New File" and *Save* it as */workspaces/copilot-testing/pom.xml*. 
    
 ![add pom with mockito dependency](./images/copilot-testing-lab6-step1a.png?raw=true "add pom with mockito dependency") 
    
-![add pom with mockito dependency](./images/ct33.png?raw=true "add pom with mockito dependency")  
+![add pom with mockito dependency](./images/copilot-testing-insert-pom-file.png?raw=true "add pom with mockito dependency")  
 
 3. Now, let's create an appropriate test class and initial set of tests. Do this in the Copilot separate Chat interface, since we expect a significant amount of output and we may want to put it in a separate file. We'll use a prompt that tells Copilot to focus on the *pom.xml* file we just created. 
 
