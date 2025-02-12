@@ -384,7 +384,7 @@ add a pom.xml file with a mockito dependency version 3.3.3, and compiler source 
 
 If you don't have a button in the chat to create the file, you can just hover over the code, click "...", then "Insert into New File" and *Save* it as */workspaces/copilot-testing/pom.xml*. 
    
-![add pom with mockito dependency](./images/copilot-testing-lab6-step1a.png?raw=true "add pom with mockito dependency") 
+![add pom with mockito dependency](./images/copilot-testing-lab6-step1a.jpg?raw=true "add pom with mockito dependency") 
    
 ![add pom with mockito dependency](./images/copilot-testing-insert-pom-file.png?raw=true "add pom with mockito dependency")  
 
