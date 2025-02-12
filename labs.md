@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.4 - 02/12/25
+## Revision 3.5 - 02/12/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -84,15 +84,16 @@ How can I test #file:webscraper.py?
 
 ![query in chat](./images/new-how-to-test-select-file.png?raw=true "query in chat")
 
-3. Copilot will likely have generated some output with a set of instruction and some example code similar to what's shown below. Notice that it brings in a unit testing framework. The generated code may not be complete - for example, it may have *placeholders* for input and output data.
+3. Copilot will likely have generated some output with a set of instruction and some example code similar to what's shown below. Notice that it brings in a unit testing framework. 
    
-![testing suggestions for file](./images/new-how-to-test-webscraper.png?raw=true "testing suggestions for file")
+![testing suggestions for file](./images/copilot-testing-test-webscraper.png?raw=true "testing suggestions for file")
 
-4. Let's take the generated code and put it into a new file. Click on the *Apply Edits* icon or the checkmark in the top right corner of the code block (next to the trash can).
+4. Let's take the generated code and put it into a new file. Hover over the generated code in the chat panel and, in the upper right corner, click on the ... icon that pops up in the icon bar. Then, in the next pop-up menu, click on the *Insert into New File* menu item.
 
-![apply edits](./images/copilot-testing-apply-edit.jpg?raw=true "apply edits")
+![more actions](./images/copilot-testing-more-actions.png?raw=true "more actions")
+
+![insert into new file](./images/copilot-testing-insert-into-new-file.png?raw=true "insert into new file")
    
-![apply edits](./images/new-click-to-apply-edits.png?raw=true "apply edits")
 
 5. After this, you should see the testing code as a new file in your editor. **Save the file as test_webscraper.py to make sure it has the correct name.**
 
