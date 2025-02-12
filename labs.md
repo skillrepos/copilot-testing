@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.3 - 02/10/25
+## Revision 3.4 - 02/12/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -56,7 +56,7 @@ def test_is_prime(number, expected):
 # Create a set of 10 unit tests for the code above
 ```
 
-9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.You can delete them after looking at them since we already have other tests.
+9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next. You can delete them after looking at them since we already have other tests.
 
 ![test by comment](./images/ct14.png?raw=true "test by comment")    
 
