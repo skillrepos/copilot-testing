@@ -8,7 +8,8 @@
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},
                 "ghcr.io/devcontainers/features/java:1": {
-		   "installMaven": "true"    
+		   "installMaven": "true",
+		   "version": "17"
 	         }
         },
 	// Configure tool-specific properties.
