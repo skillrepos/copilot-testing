@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.6 - 02/12/25
+## Revision 3.7 - 05/03/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -19,7 +19,7 @@ code prime.py
 
 ![using the context menu to gen tests](./images/new-tests-context-menu.png?raw=true "using the context menu to gen tests")
 
-3. You can scroll down and look at the output. We're going to use the shortcut command to generate the final file we want. So, just click on the *Discard* button and then click at the top to close the proposed *test_prime.py* file. We don't need to save it.
+3. You can scroll down and look at the output. We're going to use the shortcut command to generate the final file we want. So, just click on the *Close* or *Discard* button and then click at the top to close the proposed *test_prime.py* file. We don't need to save it.
 
 ![discard suggested tests](./images/new-discard-and-close-suggested-tests.png?raw=true "discard suggested tests")
 
