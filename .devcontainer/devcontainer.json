@@ -26,6 +26,11 @@
 			        "editor.wordWrap": "bounded",
 				"editor.wordWrapColumn": 9999
 			},
+			"workbench.startupEditor": "readme", 
+                        // Open Markdown files in preview mode by default
+                        "workbench.editorAssociations": {
+                            "*.md": "vscode.markdown.preview.editor"
+                        },
 			"extensions": [
 				"GitHub.copilot-chat",
 				"GitHub.copilot@1.175.0"
