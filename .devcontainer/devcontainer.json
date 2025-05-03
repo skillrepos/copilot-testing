@@ -17,29 +17,26 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			"settings": {
-				"editor.rulers": [80],
-				"editor.renderWhitespace": "boundary",
-				"errorLens.gutterIconsEnabled": true,
-				"errorLens.addAnnotationTextPrefixes": false,
-				"github.copilot.chat.setupTests.enabled": false,
-				"errorLens.enabledDiagnosticLevels": ["error", "warning"],
-			        "editor.wordWrap": "bounded",
-				"editor.wordWrapColumn": 9999
+			    "editor.rulers": [80],
+			    "editor.renderWhitespace": "boundary",
+			    "errorLens.gutterIconsEnabled": true,
+			    "errorLens.addAnnotationTextPrefixes": false,
+			    "github.copilot.chat.setupTests.enabled": false,
+			    "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+			    "editor.wordWrap": "bounded",
+			    "editor.wordWrapColumn": 9999,
+			    "workbench.startupEditor": "readme", 
+                            // Open Markdown files in preview mode by default
+                            "workbench.editorAssociations": {
+                                "*.md": "vscode.markdown.preview.editor"
+                            }
 			},
-			"workbench.startupEditor": "readme", 
-                        // Open Markdown files in preview mode by default
-                        "workbench.editorAssociations": {
-                            "*.md": "vscode.markdown.preview.editor"
-                        },
 			"extensions": [
 				"GitHub.copilot-chat",
 				"GitHub.copilot@1.175.0"
 			]
 		}
 	},
-
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pip3 install -r requirements.txt"
-
 }
