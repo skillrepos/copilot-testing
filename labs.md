@@ -295,7 +295,7 @@ create functional documentation for the #file:webscraper.py
 generate asserts to ensure that the inputs to the function are valid
 ```
 
-2. Click on the "rerun without" link next to the "Workspace" section to get a run more targeted towards what we want.
+2. **If** Copilot used */tests* in the run, click on the "rerun without" link next to the "Workspace" section to get a run more targeted towards what we want.
 
 ![rerun without](./images/new-rerun-without.png?raw=true "rerun without")
 
@@ -314,9 +314,9 @@ generate checks inline with the is_prime function to ensure that the inputs to t
 ![validating inputs with checks](./images/new-generate-checks-to-ensure-that-inputs-to-function-are-valid.png?raw=true "validating inputs with checks")  
 
 
-6. When you're happy with this code, you can go ahead and replace the highlighted code in the file by hovering over the code in the chat, clicking the apply button and then accepting the change in the file itself (click on *Accept Changes* above the updated code). 
+6. When you're happy with this code, you can go ahead and replace the highlighted code in the file by hovering over the code in the chat, clicking the apply button and then clicking on the *Keep* button in the blue bar near the updated code). 
 
-![validating inputs with checks](./images/new-update-is-prime-with-checks-and-accept.png?raw=true "validating inputs with checks")  
+![validating inputs with checks](./images/ct92.png?raw=true "validating inputs with checks")  
 
 7. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the *test_prime.py* file with the test cases and have it open in the editor. Before we prompt Copilot about additional test cases, we need to be sure that it is considering the whole file for context. Even though it shows *test-prime.py* as the current file context in the chat, it will only include the part of the file that's visible in the editor.  To see that, enter this prompt and note what reference it used.
 
