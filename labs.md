@@ -393,6 +393,11 @@ Referencing #file:pom.xml, create a StudentTest class for students enrolled at a
 
 4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There may be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. (If you don't see it, click on the "Rerun without" to run the prompt without /tests.)  If you see it, go ahead and add that part only into your *pom.xml* file. (You can just hover over the chat ouput showing pom.xml updates and then click on the *Apply in Editor* icon to have the changes suggested in the actual pom.xml file. You can then click on *Accept changes* to make the changes permanent.) Save the changes to the *pom.xml* file afterwards.
 
+**Only if Copilot didn't flag the missing dependency, run the prompt below and it should identify it so you can apply the updates.**
+```
+identify any missing dependencies in pom.xml
+```
+
 ![add junit dependency](./images/new-update-pom-2.png?raw=true "add junit dependency")  
    
 5. Let's restructure the prompt to ask for something more specific for the StudentTest class. Enter the following in chat.
