@@ -147,7 +147,7 @@ Are there any other edge cases that should be tested?
 
 **Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
 
-1. Let's see how the Copilot Fix functionality can help us out. Click on/open the **test_prime.py** file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
+1. Let's see how the Copilot Fix functionality can help us out. If not already open, click on/open the **test_prime.py** file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
 ```
 import pytest
 ```
@@ -161,7 +161,7 @@ and in the file and then right click and select *Copilot->Fix* from the menu.
  
 ![copilot fix](./images/new-copilot-fix.png?raw=true "Copilot fix")
 
-4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then **Accept** from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab.
+4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then **Accept** from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab. (Note that if we did not highlight the entire code, and just told Copilot to *fix* based on the single line, it would likely have suggested adapting the rest of the code for *pytest*.
 
 ![copilot fix](./images/new-copilot-fix-to-accept.png?raw=true "Copilot fix")
 
@@ -180,9 +180,9 @@ code create-tables.sql
 ```
 ![testing for SQL](./images/new-run-tests-for-sql.png?raw=true "testing for sql")   
 
-6. After a few moments, Copilot should respond with a plan and suggested examples of how to do the steps. The interesting part is the plan and then the code that follows that.  You can just review these to see the example, you don't need to do anything with them.
+6. After a few moments, Copilot should respond with a plan and suggested examples of how to do the steps. The interesting part is the plan and then the code that follows that. To see the suggested changes for the new test file, you can just click on the icon to the right of *Keep Undo* in the *1 file changed* section of the dialog (the one with the + and - in it). You can just review these to see the example, you don't need to do anything with them. When done, just click on dot at the top of the *Suggested Edits (1 file)* tab to close it. If you want, you can save it, but it's not needed for the rest of this lab.
 
-![testing suggestions for SQL](./images/new-generated-plan-to-test-sql.png?raw=true "testing suggestions for sql")   
+![testing suggestions for SQL](./images/ct91.png?raw=true "testing suggestions for sql")   
 
 7. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Switch back to the *webscraper.py* file. Highlight all of the code in the file and then use the CMD/CTRL+I shortcut to bring up the chat dialog window type in */explain*.
 
