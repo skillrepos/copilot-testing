@@ -171,6 +171,28 @@ Are there any other edge cases that should be tested?
 
 **Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
 
+1. Let's see how Copilot's Agent Mode can help us out. Start a new chat by clicking on the "+" sign in the upper right of the chat panel. Then, in the chat input area, click on the down arrow next to *Ask* and select *Agent*.
+
+2. In the chat area, with *Agent* selected, enter the following prompt to have Copilot run our tests for us. Let's allow Copilot to always do this sort of operation in our workspace.  Click on the down arrow next to *Allow* and select *Allow in this Workspace*. 
+
+```
+test is_prime
+```
+
+3. When you submit this, you'll see a prompt asking if it's ok for the model to run the tests in *test_prime.py*.
+
+![permission to test](./images/ct107.png?raw=true "permission to test")
+
+4. After you allow the tests to be run, you will probably see that one test is failing.
+
+![test failing](./images/ct108.png?raw=true "test failing")
+
+5. Copilot may ask you if you want it to fix the test or it may just report it. Either way, you can tell it to fix the test and let the agent proceed.  After it does that, it will suggest a change to the code so the test can pass. You can review the suggested change and just click either of the *Keep* buttons.
+
+![Letting Copilot fix test](./images/ct109.png?raw=true "Letting Copilot fix test")
+
+
+
 1. Let's see how the Copilot Fix functionality can help us out. If not already open, click on/open the **test_prime.py** file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
 ```
 import pytest
