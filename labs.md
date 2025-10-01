@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 3.8 - 09/25/25
+## Revision 4.0 - 10/01/25
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -487,6 +487,57 @@ mvn test
 
 ![run test and see it pass](./images/ct37.png?raw=true "run test and see it pass")
 
+**Lab 6 - Using the GitHub Copilot CLI to do TDD**
+
+**Purpose: In this lab, we'll see how to leverage the Copilot CLI to do Test-Driven Development.**
+
+1. First, let's start the Copilot CLI. In the *TERMINAL*, start the CLI with the command below. Then you'll see an opening screen like the one in the screenshot.
+
+```
+copilot
+```
+
+![cli startup](./images/ct110.png?raw=true "cli startup")
+
+2. We should already be logged in and since we opened Copilot in a project directory, Copilot will ask if we trust the files in the folder. We have 3 options we can choose by using the number keys or the arrow keys with Enter. Since we trust the files and want Copilot to remember that we trust the files going forward, choose option 2.
+
+![cli confirm](./images/ct111.png?raw=true "cli confirm")
+
+3. We'll now be at the place where we can tell Copilot what we want it to do. Let's have Copilot start the TDD process for a class that manages students at a university. We'll give it direction on which testing framework to use also. Enter the prompt below and then submit it.
+
+```
+Create a new Python project in a src directory. I want to use pytest and practice test-driven development for a Student class with name, email, phone, and address attributes.
+```
+
+![starting prompt](./images/ct113.png?raw=true "starting prompt")
+
+4. After this, Copilot will start working through the process. When it gets to a point where it needs to execute a command in the shell, it will stop and ask if it's ok for it to run the command(s). You can just respond with #2 again to let it know it's ok to run this command this time and in the session going forward.
+
+![run command](./images/ct114.png?raw=true "run command")
+
+5. As Copilot continues with generating files and running commands to set things up, you can just respond and approve it to do the needed operations. (Note that sometimes it may phrase things as "Do you want" when it really means "Is Copilot allowed".)
+   
+![run command](./images/ct115.png?raw=true "run command")
+
+6. As it proceeds with the process, it should install pytest and run the tests to see them fail - the "red" phase of TDD.
+
+![red phase](./images/ct118.png?raw=true "red phase")
+
+7. After the tests fail, you'll see it create the minimal implementation Student class to make the tests pass and then run them - the "green" phase of TDD.
+
+![green phase](./images/ct123.png?raw=true "green phase")
+
+8. From here, Copilot will likely add test coverage automatically.
+
+![add coverage](./images/ct124.png?raw=true "add coverage")
+
+9. Finally, it will add some documentation and supporting files and then share information about what it has done, including the file structure and other details.
+
+![summary structure](./images/ct121.png?raw=true "summary structure")
+
+![summary overall](./images/ct122.png?raw=true "summary overall")
+
+10. Note that while Copilot did most of the work here, we had a view into what was happening at each point and approval for any operations that made changes. If you want, you can further examine the files that Copilot generated and/or run any of the available *make commands*.
 
 <p align="center">
 [END OF LAB]
