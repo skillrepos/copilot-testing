@@ -3,3 +3,4 @@ flask
 aiohttp
 bs4
 requests
+pytest
