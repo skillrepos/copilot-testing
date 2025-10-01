@@ -10,8 +10,11 @@
                 "ghcr.io/devcontainers/features/java:1": {
 		   "installMaven": "true",
 		   "version": "17"
-	         }
-        },
+	         },
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "lts"
+		}
+	},
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
