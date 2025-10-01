@@ -92,14 +92,16 @@ Mark non-positive inputs as expected failures (xfail) and keep the rest as-is.
 
 ![Adding logging](./images/ct133.png?raw=true "Adding logging")
 
-10. After applying the changes, the test_prime.py file will have the suggested updates in it for review, color-coded by change. You can review the changes, but accept/keep the changes, either by clicking on the *Keep* button at the bottom or on the checkmarks for each individual change.
+<br><br>
+
+11. After applying the changes, the test_prime.py file will have the suggested updates in it for review, color-coded by change. You can review the changes, but accept/keep the changes, either by clicking on the *Keep* button at the bottom or on the checkmarks for each individual change.
 
 
 ![Keep changes](./images/ct134.png?raw=true "Keep changes")
 
 <br><br>
 
-11. Now if you run the test command again, you should see that the tests that previously failed are now marked as expected failures.
+12. Now if you run the test command again, you should see that the tests that previously failed are now marked as expected failures.
 
 ```
 pytest -s test_prime.py
