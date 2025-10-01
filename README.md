@@ -13,15 +13,10 @@ GitHub has recently made a free version of Copilot available for limited use eac
 
 When signed into GitHub, click on your profile picture/icon in the upper right and either select [Copilot](https://github.com/github-copilot/signup) 
 
-![Signing up for Copilot](./images/ct01.png?raw=true "Signing up for Copilot")
-
 **OR** select [Settings->Copilot](https://github.com/settings/copilot) and sign up.
-
-![Signing up for Copilot](./images/ct02.png?raw=true "Signing up for Copilot")
 
 You can also find help there for using Copilot in other supported IDEs, set the switch for whether or not to allow matching public code suggestions, etc.
 
-![Using Copilot options](./images/ct03.png?raw=true "Using Copilot options")
 <br/><br/>
 
 ## Step 2. To create your working environment for the labs, create a codespace by clicking on the button below:
