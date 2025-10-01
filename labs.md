@@ -46,16 +46,13 @@ code prime.py
 6. Now you can run the tests that were generated. In the *TERMINAL* panel, run the command below. (The "-s" option tells pytest not to capture stdout/stderr.)
 
 ```
-python -s test_prime.py
+pytest -s test_prime.py
 ```
-
-![running tests](./images/ct-128.png?raw=true "running tests")
-
 <br><br>
 
 7. The tests should pass but you will probably see a failure. (If not, to continue with the next steps, you can add/change a line that says "assert is_prime(0) == False".)
 
-![failed test](./images/ct-132.png?raw=true "failed test")
+![failed test](./images/ct132.png?raw=true "failed test")
 
 <br><br>
 
