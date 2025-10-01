@@ -217,11 +217,58 @@ Generate code for any other edge cases that should be tested.
 
 **Lab 3 - Using other Copilot features to help with testing**
 
-**Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
+**Purpose: In this lab, we'll see how to leverage some of Copilot's Agent Mode to help with testing**
 
 1. Let's see how Copilot's Agent Mode can help us out. Start a new chat by clicking on the "+" sign in the upper right of the chat panel. Then, in the chat input area, click on the down arrow next to *Ask* and select *Agent*.
 
-2. In the chat area, with *Agent* selected, enter the following prompt to have Copilot run our tests for us. Let's allow Copilot to always do this sort of operation in our workspace.  Click on the down arrow next to *Allow* and select *Allow in this Workspace*. 
+![new chat and mode](./images/ct144.png?raw=true "new chat and mode")
+
+
+2. Let's look at testing with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
+
+```
+code create-tables.sql
+```
+![new file and chat](./images/new-open-create-tables-and-new-chat.png?raw=true "new file and chat")
+
+
+3. In the chat area, with *Agent* selected, enter the following prompt to have Copilot run our tests for us. (The *create-tables.sql* file should already be set as the context since we just opened it. Tell Copilot's agent to test the sql code with the following prompt.
+
+```
+test create-tables
+```
+
+4. After you submit this, the agent will search for existing test files. Since we don't have any, it will ask if we want it to generate one. Respond in the chat with something like the following:
+
+```
+Yes, generate a Python test file to validate the SQL table creation.
+```
+
+![new file and chat](./images/ct145.png?raw=true "new file and chat")
+
+5. After a moment, Copilot will create a test file and then ask if it can run it. You can click the *Allow* button to let it continue. (You can also click the down arrow next to *Allow* and select an option from there if there are others like *Always allow for this workspace*.)
+
+![Allow](./images/ct146.png?raw=true "Allow")
+
+6. If tests fail, Copilot may suggest some adaptations to change the script or the tests. If it stops generating output and asks a question, you can just respond in the chat with something like:
+
+```
+Yes, continue
+```
+
+![continue](./images/ct148.png?raw=true "continue")
+
+
+7. If it pauses and asks about running commands, you can just click *Allow* or click the down arrow next to *Allow* and select *Enable Auto Approve...* and then *Allow*.
+
+![Allow](./images/ct149.png?raw=true "Allow")
+
+8. Allow the agent to continue with the process until the tests pass successfully. Once that happens, you can review the suggested changes/new files if you want. Then click on the *Keep* button in the section above the chat.
+
+![Allow](./images/ct150.png?raw=true "Allow")
+
+
+   Let's allow Copilot to always do this sort of operation in our workspace.  Click on the down arrow next to *Allow* and select *Allow in this Workspace*. 
 
 ```
 test is_prime
@@ -535,7 +582,7 @@ mvn test
 
 ![run test and see it pass](./images/ct37.png?raw=true "run test and see it pass")
 
-**Lab 6 - Using the GitHub Copilot CLI to do TDD**
+**Lab 7 (Optional) - Using the GitHub Copilot CLI to do TDD**
 
 **Purpose: In this lab, we'll see how to leverage the Copilot CLI to do Test-Driven Development.**
 
