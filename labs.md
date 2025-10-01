@@ -155,7 +155,7 @@ Create tests for this file.
 
 6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. You do that by clicking on the "+" button in the upper right of the separate chat dialog. Also, *if present* remove the default context in the chat. Click on the "x" icon next to the test_webscraper.py file to delete it as the context. (If not showing up to remove, you can click in the file and then it should show up.)
 
-![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
+![start new chat](./images/ct136.png?raw=true "start new chat")  
 ![delete default context](./images/ct102.png?raw=true "delete default context")
 
 <br><br>
@@ -164,7 +164,7 @@ Create tests for this file.
 
 ![add context](./images/ct88.png?raw=true "add context") 
  
-![updated context](./images/ct89.png?raw=true "updated context") 
+![updated context](./images/ct137.png?raw=true "updated context") 
 
 <br><br>
 
@@ -177,33 +177,36 @@ How can I measure code coverage on this file?
 
 <br><br>
 
-9. In the chat output, you'll see a set of steps interspersed with commands that can be run from the command line. 
+9. In the chat output, you'll likely see a block of code for doing coverage. We want the full set of commands that we also need to run. If you don't see individual steps interspersed with commands that can be run from the command line, click on the *(rerun without)* link above the output. Then you should see the commands also.
    
+![rerun without](./images/ct138.png?raw=true "rerun without")
+
 ![query on code coverage](./images/ct100.png?raw=true "query on code coverage")
 
 
 <br><br>
 
-10. You can hover over each and click the icon that looks like a terminal to send these commands directly to the terminal. Try this with the one for "pip install coverage". When you click on that terminal icon, it should populate the terminal with that command and you can run it.
+10. Hover over one of the commands. You may see an icon that looks like a terminal (first screenshot below). If you do, click on that to send the command directly to the terminal. If you don't see that icon, hover and click on the "..." option. Then select "Insert into terminal" (second screenshot below). These operations should populate the terminal with that command and you can run it.
     
 ![insert command from chat to terminal](./images/new-command-from-chat-to-terminal.png?raw=true "insert command from chat to terminal")
 
+![insert command from chat to terminal](./images/ct139.png?raw=true "insert command from chat to terminal")
 
 <br><br>
 
 11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Click on the "x" icon in *webscraper.py* to remove it from the context. Switch back to the *test_prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?". (If the test_prime.py file shows up in the context window with a "+" next to it, you can click on the "+"* icon to ensure it is used.)
 
 ```
-Are there any other edge cases that should be tested?
+Generate code for any other edge cases that should be tested.
 ```
 
-![finding other test cases](./images/ct105.png?raw=true "Finding other test cases")
+![finding other test cases](./images/ct143.png?raw=true "Finding other test cases")
 
 <br><br>
 
-12. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code. You'll be prompted to select a range and can just select the *Active Editor*. Then in the updated file, you can click on the *Keep* link above the code change.
+12. This should result in some additional test cases being generated in Chat that you can then just include in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code.  Then in the updated file, you can click on the *Keep* link above the code change.
 
-![adding test cases](./images/ct106.png?raw=true "Adding test cases")
+![adding test cases](./images/ct142.png?raw=true "Adding test cases")
 
     
 <p align="center">
