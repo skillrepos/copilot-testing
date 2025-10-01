@@ -123,9 +123,9 @@ pytest -s test_prime.py
 code webscraper.py
 ```
 
+<br><br>
 
-
-3. Now, let's ask Copilot for some general testing advice for this code. With *webscraper.py* selected in the editor, in the Chat input area, enter the following:
+2. Now, let's ask Copilot for some general testing advice for this code. With *webscraper.py* selected in the editor, in the Chat input area, enter the following:
 
 ```
 Create tests for this file.
@@ -133,53 +133,65 @@ Create tests for this file.
 
 ![query in chat](./images/ct96.png?raw=true "query in chat")
 
+<br><br>
 
-4. Copilot should generate a set of code for testing in a block in the chat panel, similar to what's shown below. 
+3. Copilot should generate a set of code for testing in a block in the chat panel, similar to what's shown below. 
    
 ![testing code for file](./images/ct97.png?raw=true "testing code for file")
 
+<br><br>
 
-5. You can hover over the block of code in the chat panel, click on the "..." entry at the end, and then select "Insert into New File" to get the code into the editor.
+4. You can hover over the block of code in the chat panel, click on the "..." entry at the end, and then select "Insert into New File" to get the code into the editor.
 
 ![insert into new file](./images/ct98.png?raw=true "insert into new file")
 
+<br><br>
 
-6. After this, you should see the testing code as a new file in your editor. **Save the file as test_webscraper.py to make sure it has the correct name.** (You can use the 3-bar menu item on the upper left, then *File*, then *Save As* or you can use the keyboard shortcut.)
+5. After this, you should see the testing code as a new file in your editor. **Save the file as test_webscraper.py to make sure it has the correct name.** (You can use the 3-bar menu item on the upper left, then *File*, then *Save As* or you can use the keyboard shortcut.)
 
 ![save new file](./images/new-save-test_webscraper.png?raw=true "save new file")
 
+<br><br>
 
-7. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. You do that by clicking on the "+" button in the upper right of the separate chat dialog. Also, *if present* remove the default context in the chat. Click on the "x" icon next to the test_webscraper.py file to delete it as the context. (If not showing up to remove, you can click in the file and then it should show up.)
+6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. You do that by clicking on the "+" button in the upper right of the separate chat dialog. Also, *if present* remove the default context in the chat. Click on the "x" icon next to the test_webscraper.py file to delete it as the context. (If not showing up to remove, you can click in the file and then it should show up.)
 
 ![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
 ![delete default context](./images/ct102.png?raw=true "delete default context")
 
+<br><br>
 
-8. Now, let's add the *webscraper.py* file as our context. In the chat input area, click on the area with the icon that looks like a paperclip and says *Add Context...*. Then in the list of options that pops up in top center, scroll down and select the *webscraper.py* file (or type it in). After that, it should show up in the context of the chat.
+7. Now, let's add the *webscraper.py* file as our context. In the chat input area, click on the area with the icon that looks like a paperclip and says *Add Context...*. Then in the list of options that pops up in top center, scroll down and select the *webscraper.py* file (or type it in). After that, it should show up in the context of the chat.
 
 ![add context](./images/ct88.png?raw=true "add context") 
  
 ![updated context](./images/ct89.png?raw=true "updated context") 
 
+<br><br>
 
-9. Now, let's ask Copilot how we can measure code coverage on the file? 
+8. Now, let's ask Copilot how we can measure code coverage on the file? 
 ```
 How can I measure code coverage on this file?
 ```
 
 ![query on code coverage](./images/ct101.png?raw=true "query on code coverage")
 
-10. In the chat output, you'll see a set of steps interspersed with commands that can be run from the command line. 
+<br><br>
+
+9. In the chat output, you'll see a set of steps interspersed with commands that can be run from the command line. 
    
 ![query on code coverage](./images/ct100.png?raw=true "query on code coverage")
 
 
-11. You can hover over each and click the icon that looks like a terminal to send these commands directly to the terminal. Try this with the one for "pip install coverage". When you click on that terminal icon, it should populate the terminal with that command and you can run it.
+<br><br>
+
+10. You can hover over each and click the icon that looks like a terminal to send these commands directly to the terminal. Try this with the one for "pip install coverage". When you click on that terminal icon, it should populate the terminal with that command and you can run it.
     
 ![insert command from chat to terminal](./images/new-command-from-chat-to-terminal.png?raw=true "insert command from chat to terminal")
 
 
-12. Finally, let's have Copilot help us identify any other edge cases that we should consider. Click on the "x" icon in *webscraper.py* to remove it from the context. Switch back to the *test_prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?". (If the test_prime.py file shows up in the context window with a "+" next to it, you can click on the "+"* icon to ensure it is used.)
+<br><br>
+
+11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Click on the "x" icon in *webscraper.py* to remove it from the context. Switch back to the *test_prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?". (If the test_prime.py file shows up in the context window with a "+" next to it, you can click on the "+"* icon to ensure it is used.)
 
 ```
 Are there any other edge cases that should be tested?
@@ -187,7 +199,9 @@ Are there any other edge cases that should be tested?
 
 ![finding other test cases](./images/ct105.png?raw=true "Finding other test cases")
 
-13. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code. You'll be prompted to select a range and can just select the *Active Editor*. Then in the updated file, you can click on the *Keep* link above the code change.
+<br><br>
+
+12. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code. You'll be prompted to select a range and can just select the *Active Editor*. Then in the updated file, you can click on the *Keep* link above the code change.
 
 ![adding test cases](./images/ct106.png?raw=true "Adding test cases")
 
