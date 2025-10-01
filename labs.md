@@ -15,50 +15,98 @@
 code prime.py
 ```
 
+<br><br>
+
 2. First, let's see how to use the context menu to generate some tests. Highlight the code in the *prime.py* file, right-click on it, then select *Generate Code* and then *Generate Tests*. After a moment, Copilot should generate some basic tests in another temporary file to the right.
 
 ![using the context menu to gen tests](./images/ct93.png?raw=true "using the context menu to gen tests")
+
+<br><br>
 
 3. You can scroll down and look at the output. We're going to use the shortcut command to generate the final file we want. So, just click on the *Close* or *Discard* button and then click at the top to close the proposed *test_prime.py* file. We don't need to save it.
 
 ![discard suggested tests](./images/new-discard-and-close-suggested-tests.png?raw=true "discard suggested tests")
 
-4. Now, let's use the shortcut command */tests* to generate some tests. In the same prime.py file, highlight the code and use the *<META>+I* shortcut to bring up the inline chat dialog. In the text entry box for the dialog, enter the */tests* command and click on the arrow on the right at the end to submit it.
+<br><br>
+
+4. Now, let's use the shortcut command */tests* to generate some tests. In the same prime.py file, highlight the code and use the *META-KEY+I* shortcut to bring up the inline chat dialog. In the text entry box for the dialog, enter the */tests* command and click on the arrow on the right at the end to submit it.
 
 ![using the shortcut command to gen tests](./images/new-slash-tests-command.png?raw=true "using the shortcut command to gen tests")
+
+<br><br>
 
 5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). (Make sure you are saving the testing file and not the prime.py file - it will probably have a temporary name of something like "import_...".) If you get a dialog asking about saving AI-generated results, just reply yes.
    
 ![proposed tests into new file](./images/new-slash-tests-output.png?raw=true "proposed tests into new file")
 ![saving file](./images/new-save-test_prime.png?raw=true "saving file")
 
+<br><br>
 
-6. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tells Copilot to create tests for the code above.
 
-```
-# Create tests for the code above
-```
-
-![tests from comments](./images/ct74.png?raw=true "tests from comments")
-
-7. Hit return (if you haven't). Copilot may supply a generic testing routine, such as below, the start of a routine, mention of a separate file, or a set of actual assert-based tests (NOTE: if you only get a blank line at first, try hitting return again to see if it starts filling in the function on the second line):
+6. Now you can run the tests that were generated. In the *TERMINAL* panel, run the command below. (The "-s" option tells pytest not to capture stdout/stderr.)
 
 ```
-def test_is_prime(number, expected):
-    result = is_prime(number)
-    assert result == expected, f"Expected {expected} but got 
-{result}"
+python -s test_prime.py
 ```
 
-8. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter,  delete the generated code from the previous comment and redo the steps with this comment. (You may need to hit return again and give Copilot a few seconds to generate the tests.)
+![running tests](./images/ct-128.png?raw=true "running tests")
+
+<br><br>
+
+7. The tests should pass but you will probably see a failure. (If not, to continue with the next steps, you can add/change a line that says "assert is_prime(0) == False".)
+
+![failed test](./images/ct-132.png?raw=true "failed test")
+
+<br><br>
+
+8. Let's have Copilot fix the failures. If the Copilot Chat panel is not already open, then click on the Copilot icon at the top. And/or if it is  not already in Ask mode at the bottom (says "Agent" or "Edit" instead), switch to *Ask* mode  via the drop-down at the bottom. (**NOTE:** If you don't see *Ask* mode or an option to switch to another mode, you may need to complete a setup step as shown in the second screenshot below. Click on the Copilot icon in the bottom status bar and look for a button that says "*Finish setup*" and click on that. Then you should see the options.)
+
+**Opening Chat if not open**
+
+![Opening chat panel](./images/mcp69.png?raw=true "Opening chat panel")
+<br>
+
+**Completing setup - if needed**
+
+![Completing setup](./images/mcp88.png?raw=true "Completing setup")
+<br>
+
+**Switching to Ask mode**
+
+![Switching to Agent mode](./images/sdlc91.png?raw=true "Switching to Agent mode")
+<br><br>
+
+
+9. Now, make sure the test_prime.py file is selected so it will be the current context (or drag and drop it on the Chat input area). Then enter the prompt below and submit:
 
 ```
-# Create a set of 10 unit tests for the code above
+Update the test to pass without changing implementation. 
+Mark non-positive inputs as expected failures (xfail) and keep the rest as-is.
 ```
 
-9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next. You can delete them after looking at them since we already have other tests.
+![Fixing tests](./images/ct129.png?raw=true "Fixing tests")
 
-![test by comment](./images/ct14.png?raw=true "test by comment")    
+<br><br>
+
+10. After this completes, Copilot should generate suggested updated code with the logging and messaging in the Chat interface. Hover over the block of code and click on the left +/- icon to apply the changes to the existing file.
+
+![Adding logging](./images/ct133.png?raw=true "Adding logging")
+
+10. After applying the changes, the test_prime.py file will have the suggested updates in it for review, color-coded by change. You can review the changes, but accept/keep the changes, either by clicking on the *Keep* button at the bottom or on the checkmarks for each individual change.
+
+
+![Keep changes](./images/ct134.png?raw=true "Keep changes")
+
+<br><br>
+
+11. Now if you run the test command again, you should see that the tests that previously failed are now marked as expected failures.
+
+```
+pytest -s test_prime.py
+```
+
+![Keep changes](./images/ct135.png?raw=true "Keep changes")
+
 
 <p align="center">
 **[END OF LAB]**
@@ -76,22 +124,6 @@ def test_is_prime(number, expected):
 code webscraper.py
 ```
 
-2. If the Copilot Chat panel is not already open, then click on the Copilot icon at the top. And/or if it is  not already in Ask mode at the bottom (says "Agent" or "Edit" instead), switch to *Ask* mode  via the drop-down at the bottom. (**NOTE:** If you don't see *Ask* mode or an option to switch to another mode, you may need to complete a setup step as shown in the second screenshot below. Click on the Copilot icon in the bottom status bar and look for a button that says "*Finish setup*" and click on that. Then you should see the options.)
-
-**Opening Chat if not open**
-
-![Opening chat panel](./images/mcp69.png?raw=true "Opening chat panel")
-<br>
-
-**Completing setup - if needed**
-
-![Completing setup](./images/mcp88.png?raw=true "Completing setup")
-<br>
-
-**Switching to Ask mode**
-
-![Switching to Agent mode](./images/sdlc91.png?raw=true "Switching to Agent mode")
-<br><br>
 
 
 3. Now, let's ask Copilot for some general testing advice for this code. With *webscraper.py* selected in the editor, in the Chat input area, enter the following:
