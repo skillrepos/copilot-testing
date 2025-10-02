@@ -50,9 +50,11 @@ pytest -s test_prime.py
 ```
 <br><br>
 
-7. The tests should pass but you will probably see a failure. (If not, to continue with the next steps, you can add/change a line that says "assert is_prime(0) == False".)
+7. The tests should pass but you will probably see a failure. (If not, to continue with the next steps, you can add/change a line that says "assert is_prime(0) == False" as shown in the second screenshot below and save the file. Then run the same command again.)
 
 ![failed test](./images/ct132.png?raw=true "failed test")
+
+![failed test](./images/ct166.png?raw=true "failed test")
 
 <br><br>
 
