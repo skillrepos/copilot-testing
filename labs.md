@@ -282,72 +282,85 @@ Yes, continue
 </br></br>
 
 
-**Lab 4 - Documentation for Testing**
+**Lab 4 - Editing with Copilot**
 
-**Purpose: In this lab, we'll see how to use Copilot to help document content for testing.**
+**Purpose: In this lab, we'll see how to use Copilot Edit to update our tests.**
 
-1. To have the testing code be able to be maintained, it should be documented well. We can have Copilot do this for us too. In the editor, switch to the *test_webscraper.py* file and highlight the code. Open the shortcut dialog with CTRL/CMD+I and enter the */doc* command in it. 
+1. First, switch in the chat interface to *Edit* mode via the dropdown next to *Agent*.
 
-```
-/doc
-```
+![switch to edit](./images/ct153.png?raw=true "switch to edit")   
 
-2. Hit Enter and you'll see some documentation suggested at the start of the file. You can just go ahead and accept that.
- 
- ![initial doc suggestion](./images/new-doc-test_webscraper.png?raw=true "initial doc suggestion")
+<br><br>
 
-3. This is useful, but we'd like to have the test cases more thoroughly documented. With the code still highlighted, bring up the chat dialog again with the CTRL/CMD+I sequence and tell Copilot in the dialog to "verbosely comment all the code so it's easy to understand".
+2. Next, let's add all of our *test_<name>.py* files as context. You can do this by dragging them from the file list to the chat input section or you can click on the *Add Context* button and select them from the drop-down list.
 
-```
-verbosely comment all the code so it's easy to understand
-```
+![set context](./images/ct157.png?raw=true "set context")   
 
-![verbose doc prompt](./images/new-verbosely-comment-code.png?raw=true "verbose doc prompt")
+![set context](./images/ct154.png?raw=true "set context")   
 
-4. Hit Enter and you should see more thorough comments suggested throughout the code body. You can go ahead and *Accept* them. (You may need to do multiple *Accepts*.)
+<br><br>
 
-![verbose doc suggestions](./images/new-code-with-verbose-comments.png?raw=true "verbose doc suggestions")
-
-
-5. While we're working with documentation, sometimes it can be useful to have documentation on features like APIs to go off of. Let's have Copilot try to generate that for us. In the chat interface, you can just clear the current content and enter "Create API documentation for the APIs in #file:webscraper.py". After hitting Enter, you should see documentation for the APIs as requested.
+3. With the files selected for editing, we'll provide direction to Copilot on how to update them. Let's focus on providing good documentation and logging. In the chat area, enter the following prompt:
 
 ```
-/clear
-create API documentation for the APIs in #file:webscraper.py
+Verbosely comment all test cases and add logging
 ```
 
-![api doc](./images/new-api-docs.png?raw=true "api doc")
+![edit prompt](./images/ct155.png?raw=true "edit prompt") 
+
+<br><br>
+
+4. As Copilot works on the changes, you'll see the files from the context being updated in the chat area.
 
 
-6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. Start a new chat. In the new chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
+![edits in progress](./images/ct156.png?raw=true "edits in progress")
+
+<br><br>
+
+5. When the changes are done, you can review them and then click the global *Keep* button in the section above the chat (or click *Keep* on the individual changes) to persist the updates.
+
+![edits in progress](./images/ct158.png?raw=true "edits in progress")
+
+<br><br>
+
+
+6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the different test cases for each file. First make sure the same three files are added as context in the chat area as before.
+
+<br><br>
+
+7. Now, enter the prompt below to generate the doc.
 
 ```
-create functional documentation for the #file:webscraper.py
+In a separate markdown file for each file in context, create documentation that functionally describes each test case.
 ```
 
-![functional doc](./images/new-functional-doc-output.png?raw=true "functional doc")
+![functional doc](./images/ct159.png?raw=true "functional doc")
+
+<br><br>
+
+8. As before, Copilot will process the query for each file in turn, creating a corresponding .md file.
 
 
-7. Having this documentation generated in Copilot is useful, but to make it more widely sharable we need to be able to save it separately. Simply copying it from the Chat interface won't preserve any generated code. To ensure you get everything, it works best to click on the "..." menu in the upper right of the Chat section and select "Open Chat in Editor". Go ahead and do that now.
-
-![open chat in editor](./images/new-open-chat-in-editor.png?raw=true "open chat in editor")
+![functional doc creation](./images/ct160.png?raw=true "functional doc creation")
 
 
-9. In the copy of the chat that is open in the editor now, you can right-click and select *Copy All*. This will copy all the content. 
+<br><br>
 
-![copy markdown](./images/new-copy-chat-content-in-editor.png?raw=true "copy markdown")
+9. When it's done, you can look at each .md file in the editor to see the results.
 
+![viewing results](./images/ct161.png?raw=true "viewing results")
 
-10. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
+<br><br>
 
-![copy markdown](./images/ct69.png?raw=true "copy markdown")
+10. After looking at the results, you can click on the *Keep* button(s) to persist the changes.
+
 
 <p align="center">
 **[END OF LAB]**
 </p>
 </br></br>
 
-**Lab 5 - Validating Inputs**
+**Lab 5 - Validating Inputs**  (change this to connect with MCP and then try some of the queries suggested in chatgpt)
 
 **Purpose: In this lab, we'll see how to have Copilot help validate inputs in functions.**
 
