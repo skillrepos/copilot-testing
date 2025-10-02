@@ -382,7 +382,7 @@ Link:  Generate classic personal access token (repo & workflow scopes) https://g
 3. Now we need to add the GitHub MCP Server configuration in our IDE. You could fill most of this out via IDE prompts, but for simplicity, we already have a sample configuration file that we can just copy in. Run the commands below in the terminal. The last one will open the file in the editor.
 
 ```
-cd /workspaces/mcp
+cd /workspaces/copilot-testing
 mkdir .vscode
 cp extra/mcp_github_settings.json  .vscode/mcp.json
 code .vscode/mcp.json
