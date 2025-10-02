@@ -267,93 +267,14 @@ Yes, continue
 
 ![Allow](./images/ct150.png?raw=true "Allow")
 
+9. Suppose we need to better understand how the generated testing code works. We can have Copilot explain that to us. Highlight all of the code in the *test_create_tables.py* file (or whatever the test file was named) and then use the CMD/CTRL+I shortcut to bring up the chat dialog window type in */explain*.
 
-   Let's allow Copilot to always do this sort of operation in our workspace.  Click on the down arrow next to *Allow* and select *Allow in this Workspace*. 
+![explain test file](./images/ct151.png?raw=true "explain test file")   
 
-```
-test is_prime
-```
+10. This will dump a lot of output in the dialog. To better review it, click on the *View in Chat* button to put it in the main Chat interface.
 
-3. When you submit this, you'll see a prompt asking if it's ok for the model to run the tests in *test_prime.py*.
+![view in chat](./images/ct152.png?raw=true "view in chat")   
 
-![permission to test](./images/ct107.png?raw=true "permission to test")
-
-4. After you allow the tests to be run, you will probably see that one test is failing.
-
-![test failing](./images/ct108.png?raw=true "test failing")
-
-5. Copilot may ask you if you want it to fix the test or it may just report it. Either way, you can tell it to fix the test and let the agent proceed.  After it does that, it will suggest a change to the code so the test can pass. You can review the suggested change and just click either of the *Keep* buttons.
-
-![Letting Copilot fix test](./images/ct109.png?raw=true "Letting Copilot fix test")
-
-
-
-1. Let's see how the Copilot Fix functionality can help us out. If not already open, click on/open the **test_prime.py** file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
-```
-import pytest
-```
-
-2. Since the rest of the file is expecting *unittest* as the framework, we have some problems now in the file. In fact, if you look at the **PROBLEMS** tab at the bottom of the codespace, you can see that it flags two instances in the file where *unittest* is undefined.
-
-![new problems](./images/new-problems-in-test_prime.png?raw=true "new problems")
-
-3. We know what the fix is, but let's see if Copilot can help identify and correct the issue for us. Select/highlight all the code
-and in the file and then right click and select *Copilot->Fix* from the menu.
- 
-![copilot fix](./images/new-copilot-fix.png?raw=true "Copilot fix")
-
-4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then **Accept** from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab. (Note that if we did not highlight the entire code, and just told Copilot to *fix* based on the single line, it would likely have suggested adapting the rest of the code for *pytest*.
-
-![copilot fix](./images/new-copilot-fix-to-accept.png?raw=true "Copilot fix")
-
-
-5. Next, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
-
-```
-code create-tables.sql
-```
-![new file and chat](./images/new-open-create-tables-and-new-chat.png?raw=true "new file and chat")
-
-5. Since we already have our desired file selected, we can just run the */tests* command in the chat interface. (**Note:** There may be a long pause after it generates the first few suggested lines in the chat output. But after that pause, it should generate many more lines of suggested code.)
-
-```
-/tests 
-```
-![testing for SQL](./images/new-run-tests-for-sql.png?raw=true "testing for sql")   
-
-6. After a few moments, Copilot should respond with a plan and suggested examples of how to do the steps. The interesting part is the plan and then the code that follows that. To see the suggested changes for the new test file, you can just click on the icon to the right of *Keep Undo* in the *1 file changed* section of the dialog (the one with the + and - in it). You can just review these to see the example, you don't need to do anything with them. When done, just click on dot at the top of the *Suggested Edits (1 file)* tab to close it. If you want, you can save it, but it's not needed for the rest of this lab.
-
-![testing suggestions for SQL](./images/ct91.png?raw=true "testing suggestions for sql")   
-
-7. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Switch back to the *webscraper.py* file. Highlight all of the code in the file and then use the CMD/CTRL+I shortcut to bring up the chat dialog window type in */explain*.
-
-![explain webscraper.py](./images/ct51.png?raw=true "explain webscraper.py")   
-
-8. This will dump a lot of output in the dialog. To better review it, click on the *View in Chat* button to put it in the main Chat interface.
-
-![view in chat](./images/new-view-in-chat.png?raw=true "view in chat")   
-
-9. While we're at it, let's have Copilot explain how the testing file it created for us works. Open the *test_webscraper.py* file. Then, in the chat panel, start a *new* chat (via the + sign). In the chat interface - enter *@workspace /explain #* **and pause**. There should then be a popup, where you can use the arrow key to arrow down and select the *#file* entry and hit Enter. 
-
-```
-@workspace /explain #
-```
-
-![selecting file](./images/ct54.png?raw=true "selecting file")
-
-10. After you selecting the *#file* selector, you should get a popup near the center top of the codespace interface. This will let you select the *test_webscraper.py* file. Select that file.
-
-![selecting file](./images/ct55.png?raw=true "selecting file")
-
-11. You'll then have a highlighted command to explain the file. Hit Enter for that. You may or may not then have another popup to select the range of the testing file to explain. But if you do, you can just select the *TestWebScraper* entry.
- 
- ![full entry](./images/ct57.png?raw=true "full entry")
- 
- ![full entry](./images/ct56.png?raw=true "full entry")  
-
-12. After executing this, you'll likely see lots of output, including example usage, code improvements, etc. But you can scan back up through the output to see the sections with explanations. If you want to specifically see some suggested improvements, you can also try a prompt such as *How can I improve #file:test_webscraper.py?*
-
- ![explanation](./images/new-web-scraper-test-explanation.png?raw=true "explanation") 
 
 <p align="center">
 **[END OF LAB]**
