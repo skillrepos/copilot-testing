@@ -188,7 +188,7 @@ How can I measure code coverage on this file?
 
 <br><br>
 
-10. Hover over one of the commands. You may see an icon that looks like a terminal (first screenshot below). If you do, click on that to send the command directly to the terminal. If you don't see that icon, hover and click on the "..." option. Then select "Insert into terminal" (second screenshot below). These operations should populate the terminal with that command and you can run it.
+10. Hover over one of the commands. You may see an icon that looks like a terminal (first screenshot below). If you do, click on that to send the command directly to the terminal. (If you don't see that icon, hover and click on the "..." option.) Then select "Insert into terminal" (second screenshot below). These operations should populate the terminal with that command and you can run it.
     
 ![insert command from chat to terminal](./images/new-command-from-chat-to-terminal.png?raw=true "insert command from chat to terminal")
 
