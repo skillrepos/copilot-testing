@@ -30,7 +30,9 @@ Then click on the option to create a new codespace.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Creating new codespace from button](./images/ct11.png?raw=true "Creating new codespace from button")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**This will run for several minutes while it gets everything ready.**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**This will run for several minutes while it gets the basic setup done. Then it will pause for a few minutes and then continue with initializing the python environment. You will see a screen like the below one when it is initializing the python environment.
+
+![Finishing setup](./images/ct164.png?raw=true "Finishing setup")
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- After the codespace has initialized there will be a terminal present.
 
@@ -38,7 +40,7 @@ Then click on the option to create a new codespace.
 
 ## Step 3. Open the labs
 
-After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md**, right-click on it, and open it with the **Preview** option.)
+After the codespace has started, open the labs document either in a separate browser tab or by going to the file tree on the left, finding the file named **labs.md**, and clicking on it.)
 
 ![Labs doc preview in codespace](./images/ct12.png?raw=true "Labs doc preview in codespace")
 
