@@ -7,7 +7,7 @@ These steps **must** be completed prior to starting the actual labs.
 
 ## Step 1. Copilot access. 
 
-GitHub has recently made a free version of Copilot available for limited use each month. You can use that version to do the labs in this course. If you prefer, you can signup for their paid individual plan by following the details below, but this is optional for this training.
+GitHub has recently made a free version of Copilot available for limited use each month. You can use that version to do most of the labs in this course. If you prefer, you can signup for their paid individual plan by following the details below, but this is optional for this training.
 
 **If you want to signup for a paid Copilot option...**
 
