@@ -407,24 +407,33 @@ After this, you should see the text above the server name change to "√Running 
 <br><br>
 
 
-6. Now that we have these tools available, we can use them in Copilot's Chat interface. (Again, you must be in *Agent* mode.) Here are some example prompts to try:
+6. Now that we have these tools available, we can use them in Copilot's Chat interface. (Again, you must be in *Agent* mode.) Here an example prompt to list out open issues in the GitHub repository the codespace is based on:
 
 ```
-Find username for <your name> on GitHub
-Show info on recent changes in <repo path> on GitHub
+What are 
+Give me a list of the open issues for the current GitHub repo
 ```
 </br></br>
 
-7. Notice the mention of "Ran <tool name> - GitHub MCP Server (MCP Server) early in the output for each.
+7. Notice the mention of "Ran <tool name> - GitHub MCP Server (MCP Server) early in the output.
 
-![Example usage](./images/mcp26.png?raw=true "Example usage")
+![Example usage](./images/ct162.png?raw=true "Example usage")
 
+8. Now we can use the MCP tools to help answer questions in conjunction with our local changes. For example, assuming the first issue it listed was the one about "Add unit tests for existing Python modules", we can ask if our local changes resolve this. Try this prompt in the chat area.
 
-8. If you click on the *Extensions* icon on the left (#1 in the screenshot below), you'll see a category for *MCP SERVERS - INSTALLED*. This should show the GitHub MCP Server since we just connected to that.   
+```
+Is the first issue in the GitHub repository already solved by my local code?
+```
+
+9. After you run this, Copilot will likely tell you that yes, the issue is resolved by your local changes. (If you need to *Allow/Approve* operations from the agent to complete this, go ahead.)
+
+![Example usage](./images/ct163.png?raw=true "Example usage")
+
+10. If you click on the *Extensions* icon on the left (#1 in the screenshot below), you'll see a category for *MCP SERVERS - INSTALLED*. This should show the GitHub MCP Server since we just connected to that.   
 
 ![Extensions and browser](./images/mcp97.png?raw=true "Extensions and browser")
 
-9. If you then click on the globe icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use.
+11. If you then click on the globe icon (#2 in the screenshot above), you can get to another page that shows a list of available MCP servers to use.
 
 ![MCP Servers](./images/mcp98.png?raw=true "MCP Servers")
 
@@ -433,85 +442,6 @@ Show info on recent changes in <repo path> on GitHub
 </p>
 </br></br></br>
 
-**Lab 5 - Validating Inputs**  (change this to connect with MCP and then try some of the queries suggested in chatgpt)
-
-**Purpose: In this lab, we'll see how to have Copilot help validate inputs in functions.**
-
-1. Copilot can also help with other kinds of validation besides general test cases. It can also validate that inputs going into a function are valid. Go back to the *prime.py* file, highlight your *is_prime* code and enter the prompt below into the Copilot Chat interface.
-
-```
-generate asserts to ensure that the inputs to the function are valid
-```
-
-2. **If** Copilot used */tests* in the run, click on the "rerun without" link next to the "Workspace" section to get a run more targeted towards what we want.
-
-![rerun without](./images/new-rerun-without.png?raw=true "rerun without")
-
-3. From here, Copilot should respond and suggest asserts, as requested, to validate the functions inputs. The response may look something like the following (again you do not have to change anything).
-
-![validating inputs with asserts](./images/new-inputs-asserts.png?raw=true "validating inputs with asserts")   
-
-4. We can also be more directive and tell Copilot to generate checks within our *is_prime* function for valid inputs. Try this prompt (again in the Chat interface):
-
-```
-generate checks inline with the is_prime function to ensure that the inputs to the is_prime function are valid and raise an error if they are not
-```
-
-5. This should allow Copilot to generate code to validate the inputs, but with a more standard coding mechanism to surface any issues. Here's what example output from that might look like.
-
-![validating inputs with checks](./images/new-generate-checks-to-ensure-that-inputs-to-function-are-valid.png?raw=true "validating inputs with checks")  
-
-
-6. When you're happy with this code, you can go ahead and replace the highlighted code in the file by hovering over the code in the chat, clicking the apply button and then clicking on the *Keep* button in the blue bar near the updated code). 
-
-![validating inputs with checks](./images/ct92.png?raw=true "validating inputs with checks")  
-
-7. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the *test_prime.py* file with the test cases and have it open in the editor. Before we prompt Copilot about additional test cases, we need to be sure that it is considering the whole file for context. Even though it shows *test-prime.py* as the current file context in the chat, it will only include the part of the file that's visible in the editor.  To see that, enter this prompt and note what reference it used.
-
-```
-What other kinds of test cases should we check for?
-```
-
-8. Notice that in my example, only lines 11-28 were used as a reference - which corresponds to what was visible in the editor (aka #editor). With only a subset of the test cases visible, it's possible/likely that Copilot would repeat some that were already in the parts of the file that weren't visible in the editor.  With this prompt, Copilot will likely add some additional test cases like these.
-
-![only visible context](./images/new-only-editor-visible-context.png?raw=true "only visible context") 
-   
-9. To make sure we get the entire file as context, we can follow the same process as in the previous lab. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
-   
-![disable current file context](./images/new-disable-current-file-context.png?raw=true "disable current file context") 
-
-![disabled current file context](./images/new-disabled-current-file-context.png?raw=true "disabled current file context") 
-
-10. Click on the *paper clip* icon and select the *test-prime.py* file from the dialog that pops up to add the entire file as context. Afterwards, the chat window should look like the second screenshot below.
-
-![attach file context](./images/new-attach-context.png?raw=true "attach file context") 
-
-![attached file context](./images/new-attached-file-for-context.png?raw=true "attached file context") 
-
-
-11. Now, we can input the same prompt again and we should see that the entire file was used instead of just the visible portion. Input the same prompt and notice the output. Since the entire file was used as context, the new test cases should not overlap the existing ones. Afterwards, you can add the changes into the *test-prime.py* file if you want.
-
-```
-What other kinds of test cases should we check for?
-```
-
-![distinct test case context](./images/new-distinct-test-case-context.png?raw=true "distinct test case context") 
-
-12. Finally, let's see if Copilot can help refactor our code to make it more testable. We'll use the *webscraper.py* file for this since it is more substantial.  Enter the query below in the Chat interface. 
-
-```
-refactor the code in #file:webscraper.py to make it more easily testable
-```
-
-13. You should see some suggestions for improving testability in the file in the chat output. These can be applied to the current code if you want.
-    
-![Refactoring for testing](./images/new-refactor-for-testability.png?raw=true "refactoring for testing")  
-
-
-<p align="center">
-**[END OF LAB]**
-</p>
-</br></br>
 
 **Lab 6 - Leveraging frameworks and TDD**
 
@@ -589,7 +519,7 @@ mvn test
 
 ![run test and see it pass](./images/ct37.png?raw=true "run test and see it pass")
 
-**Lab 7 (Optional) - Using the GitHub Copilot CLI to do TDD**
+**Lab 6 (Alternate) - Using the GitHub Copilot CLI to do TDD. Only works for paid Copilot plans that are authorized to use the CLI**
 
 **Purpose: In this lab, we'll see how to leverage the Copilot CLI to do Test-Driven Development.**
 
