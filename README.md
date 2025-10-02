@@ -19,7 +19,7 @@ You can also find help there for using Copilot in other supported IDEs, set the 
 
 <br/><br/>
 
-## Step 2. To create your working environment for the labs, create a codespace by clicking on the button below:
+## Step 2. To create your working environment for the labs, create a codespace by clicking on the button below AND wait for it to finish:
 
 Click on this button ⬇️
 <br/><br/>
@@ -33,12 +33,16 @@ Then click on the option to create a new codespace.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**This will run for several minutes while it gets the basic setup done. Then it will pause for a few minutes and then continue with initializing the python environment. You will see a screen like the below one when it is initializing the python environment.
 
 ![Finishing setup](./images/ct164.png?raw=true "Finishing setup")
-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- After the codespace has initialized there will be a terminal present.
+
+## Step 3. Open a new terminal
+
+After the codespace has completely initialized, you'll need to open a **new** terminal to have the python environment active. To do this, click on the "+" sign in the upper right (see screenshot). Then you should see "(py_env)" at the start of the prompt.
+
+![New terminal](./images/ct165.png?raw=true "New terminal")
 
 <br/><br/>
 
-## Step 3. Open the labs
+## Step 4. Open the labs
 
 After the codespace has started, open the labs document either in a separate browser tab or by going to the file tree on the left, finding the file named **labs.md**, and clicking on it.)
 
@@ -49,7 +53,7 @@ Any command in the gray boxes is either code intended to be run in the console o
 
 Labs doc: [Copilot Testing Labs](labs.md)
 
-## Step 4. Set codespace timeout (optional but recommended)
+## Step 5. Set codespace timeout (optional but recommended)
 
 While logged in to GitHub, go to https://github.com/settings/codespaces.
 
