@@ -248,7 +248,7 @@ Yes, generate a Python test file to validate the SQL table creation.
 
 ![new file and chat](./images/ct145.png?raw=true "new file and chat")
 
-5. After a moment, Copilot will create a test file and then ask if it can run it. You can click the *Allow* button to let it continue. (You can also click the down arrow next to *Allow* and select an option from there if there are others like *Always allow for this workspace*.)
+5. After a moment, Copilot may ask if it can install something or create a test file and then ask if it can run it. You can click the *Allow* button to let it continue. (You can also click the down arrow next to *Allow* and select an option from there if there are others like *Always allow for this workspace*.)
 
 ![Allow](./images/ct146.png?raw=true "Allow")
 
@@ -412,7 +412,7 @@ After this, you should see the text above the server name change to "√Running 
 6. Now that we have these tools available, we can use them in Copilot's Chat interface. (Again, you must be in *Agent* mode.) Here an example prompt to list out open issues in the GitHub repository the codespace is based on:
 
 ```
-What are 
+What are the latest changes in <repo name>?
 Give me a list of the open issues for the current GitHub repo
 ```
 </br></br>
